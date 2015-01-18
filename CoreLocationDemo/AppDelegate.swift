@@ -14,26 +14,10 @@ import CoreLocation
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
     var window: UIWindow?
-    var locationManager: CLLocationManager!
-    var seenError : Bool = false
-    var locationFixAchieved : Bool = false
-    var locationStatus : NSString = "Not Started"
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        initLocationManager()
-        
         return true
-    }
-    
-    func initLocationManager() {
-        seenError = false
-        locationFixAchieved = false
-        locationManager = CLLocationManager()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        
-        locationManager.requestAlwaysAuthorization()
     }
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
@@ -41,7 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        //
+        for location in locations {
+            self.locations.append(location as CLLocation)
+        }
+        
+        println(self.locations)
     }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {

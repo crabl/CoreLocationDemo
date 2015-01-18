@@ -15,6 +15,7 @@
 		100EFB6F1A6B24FD0075336B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 100EFB6D1A6B24FD0075336B /* LaunchScreen.xib */; };
 		100EFB7B1A6B24FD0075336B /* CoreLocationDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100EFB7A1A6B24FD0075336B /* CoreLocationDemoTests.swift */; };
 		100EFB851A6B25CD0075336B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 100EFB841A6B25CD0075336B /* CoreLocation.framework */; };
+		100EFB871A6B2FC70075336B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 100EFB861A6B2FC70075336B /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		100EFB791A6B24FD0075336B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		100EFB7A1A6B24FD0075336B /* CoreLocationDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationDemoTests.swift; sourceTree = "<group>"; };
 		100EFB841A6B25CD0075336B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		100EFB861A6B2FC70075336B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				100EFB871A6B2FC70075336B /* MapKit.framework in Frameworks */,
 				100EFB851A6B25CD0075336B /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,7 +67,6 @@
 		100EFB531A6B24FC0075336B = {
 			isa = PBXGroup;
 			children = (
-				100EFB841A6B25CD0075336B /* CoreLocation.framework */,
 				100EFB5E1A6B24FD0075336B /* CoreLocationDemo */,
 				100EFB771A6B24FD0075336B /* CoreLocationDemoTests */,
 				100EFB5D1A6B24FD0075336B /* Products */,
@@ -97,6 +99,8 @@
 		100EFB5F1A6B24FD0075336B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				100EFB861A6B2FC70075336B /* MapKit.framework */,
+				100EFB841A6B25CD0075336B /* CoreLocation.framework */,
 				100EFB601A6B24FD0075336B /* Info.plist */,
 			);
 			name = "Supporting Files";
