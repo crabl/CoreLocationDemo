@@ -17,17 +17,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Idj-gz-I22">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Idj-gz-I22">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Idj-gz-I22" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="DUC-cK-5cc"/>
+                            <constraint firstItem="Idj-gz-I22" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Pag-KR-pTn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Idj-gz-I22" secondAttribute="trailing" constant="-16" id="aJI-Ad-2W8"/>
+                            <constraint firstItem="Idj-gz-I22" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="cia-1X-f8P"/>
                             <constraint firstItem="Idj-gz-I22" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="i9P-bO-Fqb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Idj-gz-I22" secondAttribute="bottom" id="iQc-gD-Z0h"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Idj-gz-I22" secondAttribute="bottom" id="ngz-6h-q2h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Idj-gz-I22" secondAttribute="trailing" constant="-16" id="pdg-qb-FQs"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="DUC-cK-5cc"/>
+                                <exclude reference="aJI-Ad-2W8"/>
+                                <exclude reference="i9P-bO-Fqb"/>
+                                <exclude reference="iQc-gD-Z0h"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="Idj-gz-I22" id="Pth-3v-caN"/>
