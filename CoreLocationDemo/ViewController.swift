@@ -43,11 +43,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
 
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
-        //
+        println(error)
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        //
         for location in locations {
             self.locations.append(location as CLLocation)
         }
@@ -67,6 +66,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             var polyline = MKPolyline(coordinates: &a, count: a.count)
             mapView.addOverlay(polyline)
         }
+        
+        if (self.locations.count > 50) {
+            sendLocationsToServer(self.locations)
+            self.locations = []
+        }
     }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
@@ -74,14 +78,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
-        
         if overlay is MKPolyline {
             var polylineRenderer = MKPolylineRenderer(overlay: overlay)
             polylineRenderer.strokeColor = UIColor.blueColor()
             polylineRenderer.lineWidth = 4
             return polylineRenderer
         }
+        
         return nil
+    }
+    
+    func sendLocationsToServer(locations: [CLLocation]) {
+        println("Sending Locations to Server")
     }
 }
 
